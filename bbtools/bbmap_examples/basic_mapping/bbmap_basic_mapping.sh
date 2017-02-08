@@ -14,7 +14,7 @@ module load bbtools
 # (you only need to do this once)
 bbmap.sh ref="$bbtoolsExamplesDir"/data/Ref_database.fa.gz \
 path="$bbtoolsExamplesDir"/bbmap_examples/basic_mapping/results \
-usejni threads=2 -Xmx4g
+usejni
 
 # Map reads to the reference index
 # -usejni uses compiled C code for speedup
@@ -28,4 +28,4 @@ usejni threads=2 -Xmx4g
 bbmap.sh in="$bbtoolsExamplesDir"/data/reads.fq.gz \
 path="$bbtoolsExamplesDir"/bbmap_examples/basic_mapping/results \
 out="$bbtoolsExamplesDir"/bbmap_examples/basic_mapping/results/mapped.sam \
-usejni pigz unpigz threads=2 -Xmx4g maxindel=90
+usejni pigz unpigz maxindel=90
