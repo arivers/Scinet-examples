@@ -44,3 +44,4 @@ ___
 * For simplicity I have created an env.sh variable that creates the top level path directory ($bbtoolsExamplesDir). By sourcing this file ("source env.sh") you can run the example scripts from different directories.
 * `setup.sh` is a maintenance script that can be used with the `build` or `clean` option to run all examples and place the data into the results directories.
 * If an example script is run individually progress and statistics will be written to the screen through the standard error stream. That output can be seen in the `terminaloutput.txt`  file of the `results` directory.
+* To test this interactively on CERES log into an interactive node e.g.  `srun --pty -p short -t 01:00:00 -n 16 -N 1 /bin/bash -I`
