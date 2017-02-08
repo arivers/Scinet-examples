@@ -16,4 +16,4 @@ bbduk.sh in="$bbtoolsExamplesDir"/data/reads.fq.gz \
 out="$bbtoolsExamplesDir"/bbduk_examples/kmer_filtering/results/unmatched.fq.gz \
 outm="$bbtoolsExamplesDir"/bbduk_examples/kmer_filtering/results/matched.fq.gz \
 ref="$bbtoolsExamplesDir"/data/phix174_ill.ref.fa.gz \
-k=31 hdist=1 stats=results/stats.txt
+k=31 hdist=1 stats="$bbtoolsExamplesDir"/bbduk_examples/kmer_filtering/results/stats.txt
