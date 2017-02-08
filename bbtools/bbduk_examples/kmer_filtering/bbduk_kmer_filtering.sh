@@ -9,7 +9,7 @@
 (source env.sh) in the bbtools example directory before running this script"; exit 1;}
 
 # Load the bbtools module
-module load bbmap
+module load bbtools
 
 # Filter out PhiX containing reads optionally palcing them in their own file
 bbduk.sh in=.$bbtoolsExamplesDir/data/reads.fq \

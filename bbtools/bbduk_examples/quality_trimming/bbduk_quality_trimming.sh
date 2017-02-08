@@ -7,7 +7,7 @@
 (source env.sh) in the bbtools example directory before running this script"; exit 1;}
 
 # Load the bbtools module
-module load bbmap
+module load bbtools
 
 #Trim reads with a quality score of less than 10 from the right side of reads
 bbduk.sh in=$bbtoolsExamplesDir/data/reads.fq \

@@ -7,7 +7,7 @@
 (source env.sh) in the bbtools example directory before running this script"; exit 1;}
 
 # Load the bbtools module
-module load bbmap
+module load bbtools
 
 # Trim the adapters using the reference file adaptors.fa (provided by bbduk)
 bbduk.sh in="$bbtoolsExamplesDir"/data/reads.fq \

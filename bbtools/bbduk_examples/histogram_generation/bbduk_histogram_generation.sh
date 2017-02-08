@@ -8,7 +8,7 @@
 (source env.sh) in the bbtools example directory before running this script"; exit 1;}
 
 # Load the bbtools module
-module load bbmap
+module load bbtools
 
 # Generate summary histogram data (normally these would be run during another \
 # opperation like adapter trimming )
