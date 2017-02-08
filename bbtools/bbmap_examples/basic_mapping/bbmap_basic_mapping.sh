@@ -8,22 +8,24 @@
 (source env.sh) in the bbtools example directory before running this script"; exit 1;}
 
 # Load the bbtools module
-module load bbmap
+module load bbtools
 
 # Create a mapping index for the phage phiX174 and save it to disk \
 # (you only need to do this once)
 bbmap.sh ref="$bbtoolsExamplesDir"/data/phix174_ill.ref.fa.gz \
-path="$bbtoolsExamplesDir"/bbmap_examples/basic_mapping/results
+path="$bbtoolsExamplesDir"/bbmap_examples/basic_mapping/results \
+usejni threads=2 -Xmx4g
 
 # Map reads to the reference index
 # -usejni uses compiled C code for speedup
 # -pigz and -unpigz perform parallel compression and uncompression
+# -Xmx4g limits the amount of memory for this very small job
+# -threads limits the threads for the example. You should match this to the \
+# number o threads requested my your SLURM job.  by defauld bbtools grabs all \
+# available threads.
+# -maxindel=90 sets the maximum gap between the read pairs. The default is 16k \
+# for eukaryotic RNA but this is not needed for DNA
 bbmap.sh in="$bbtoolsExamplesDir"/data/reads.fq \
 path="$bbtoolsExamplesDir"/bbmap_examples/basic_mapping/results \
 out="$bbtoolsExamplesDir"/bbmap_examples/basic_mapping/results/mapped.sam \
-bamscript="$bbtoolsExamplesDir"/bbmap_examples/basic_mapping/results/bamscript.sh \
-usejni pigz unpigz
-
-# Create and index a bam file using the script created by bbtools
-module load samtools
-bash "$bbtoolsExamplesDir"/bbmap_examples/basic_mapping/results/bamscript.sh
+usejni pigz unpigz threads=2 -Xmx4g maxindel=90

@@ -8,7 +8,7 @@
 (source env.sh) in the bbtools example directory before running this script"; exit 1;}
 
 # Load the bbtools module
-module load bbmap
+module load bbtools
 
 # Merge reads and write merged and unmerged reads to files along with an insert size histogram
 
