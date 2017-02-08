@@ -12,7 +12,7 @@ module load bbtools
 
 # Create a mapping index for the phage phiX174 and save it to disk \
 # (you only need to do this once)
-bbmap.sh ref="$bbtoolsExamplesDir"/data/phix174_ill.ref.fa.gz \
+bbmap.sh ref="$bbtoolsExamplesDir"/data/Ref_database.fa.gz \
 path="$bbtoolsExamplesDir"/bbmap_examples/basic_mapping/results \
 usejni threads=2 -Xmx4g
 
@@ -25,7 +25,7 @@ usejni threads=2 -Xmx4g
 # available threads.
 # -maxindel=90 sets the maximum gap between the read pairs. The default is 16k \
 # for eukaryotic RNA but this is not needed for DNA
-bbmap.sh in="$bbtoolsExamplesDir"/data/reads.fq \
+bbmap.sh in="$bbtoolsExamplesDir"/data/reads.fq.gz \
 path="$bbtoolsExamplesDir"/bbmap_examples/basic_mapping/results \
 out="$bbtoolsExamplesDir"/bbmap_examples/basic_mapping/results/mapped.sam \
 usejni pigz unpigz threads=2 -Xmx4g maxindel=90

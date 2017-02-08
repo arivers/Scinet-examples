@@ -12,8 +12,8 @@
 module load bbtools
 
 # Filter out PhiX containing reads optionally palcing them in their own file
-bbduk.sh in=.$bbtoolsExamplesDir/data/reads.fq \
-out=$bbtoolsExamplesDir/bbduk_examples/kmer_filtering/results/unmatched.fq \
-outm=$bbtoolsExamplesDir/bbduk_examples/kmer_filtering/results/matched.fq \
-ref=$bbtoolsExamplesDir/data/phix174_ill.ref.fa.gz \
+bbduk.sh in="$bbtoolsExamplesDir"/data/reads.fq.gz \
+out="$bbtoolsExamplesDir"/bbduk_examples/kmer_filtering/results/unmatched.fq.gz \
+outm="$bbtoolsExamplesDir"/bbduk_examples/kmer_filtering/results/matched.fq.gz \
+ref="$bbtoolsExamplesDir"/data/phix174_ill.ref.fa.gz \
 k=31 hdist=1 stats=results/stats.txt

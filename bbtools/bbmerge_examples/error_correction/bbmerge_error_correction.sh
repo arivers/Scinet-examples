@@ -12,6 +12,6 @@ module load bbtools
 
 # Merge reads and write merged and unmerged reads to files along with an insert size histogram
 
-bbmerge.sh in="$bbtoolsExamplesDir"/data/reads.fq \
-out="$bbtoolsExamplesDir"/bbmerge_examples/error_correction/results/corrected.fq \
+bbmerge.sh in="$bbtoolsExamplesDir"/data/reads.fq.gz \
+out="$bbtoolsExamplesDir"/bbmerge_examples/error_correction/results/corrected.fq.gz \
 ecco mix usejni

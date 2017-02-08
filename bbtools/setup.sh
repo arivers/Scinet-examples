@@ -11,7 +11,7 @@
 if [ "$1" == 'build' ]; then
   "$bbtoolsExamplesDir"/bbduk_examples/adaptor_trimming/bbduk_adaptor_trimming.sh \
   2> "$bbtoolsExamplesDir"/bbduk_examples/adaptor_trimming/results/terminaloutput.txt
-  "$bbtoolsExamplesDir"/bbduk_examples/histogram_generation/histogram_generation.sh \
+  "$bbtoolsExamplesDir"/bbduk_examples/histogram_generation/bbduk_histogram_generation.sh \
   2> "$bbtoolsExamplesDir"/bbduk_examples/histogram_generation/results/terminaloutput.txt
   "$bbtoolsExamplesDir"/bbduk_examples/kmer_filtering/bbduk_kmer_filtering.sh \
   2> "$bbtoolsExamplesDir"/bbduk_examples/kmer_filtering/results/terminaloutput.txt

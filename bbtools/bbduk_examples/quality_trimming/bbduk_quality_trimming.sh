@@ -10,6 +10,6 @@
 module load bbtools
 
 #Trim reads with a quality score of less than 10 from the right side of reads
-bbduk.sh in=$bbtoolsExamplesDir/data/reads.fq \
-out=$bbtoolsExamplesDir/bbduk_examples/quality_trimming/results/clean.fq \
+bbduk.sh in="$bbtoolsExamplesDir"/data/reads.fq.gz \
+out="$bbtoolsExamplesDir"/bbduk_examples/quality_trimming/results/clean.fq.gz \
 qtrim=r trimq=10

@@ -19,7 +19,7 @@ module load bbtools
 # bqhist=       Quality histogram designed for box plots.
 # lhist=        Read length histogram.
 # gchist=       Read GC content histogram.
-bbduk.sh in="$bbtoolsExamplesDir"/data/reads.fq \
+bbduk.sh in="$bbtoolsExamplesDir"/data/reads.fq.gz \
 bhist="$bbtoolsExamplesDir"/bbduk_examples/histogram_generation/results/bhist.txt \
 qhist="$bbtoolsExamplesDir"/bbduk_examples/histogram_generation/results/qhist.txt \
 gchist="$bbtoolsExamplesDir"/bbduk_examples/histogram_generation/results/gchist.txt \

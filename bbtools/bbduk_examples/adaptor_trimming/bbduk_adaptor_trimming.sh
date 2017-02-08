@@ -10,7 +10,7 @@
 module load bbtools
 
 # Trim the adapters using the reference file adaptors.fa (provided by bbduk)
-bbduk.sh in="$bbtoolsExamplesDir"/data/reads.fq \
-out="$bbtoolsExamplesDir"/bbduk_examples/adaptor_trimming/results/clean.fq \
+bbduk.sh in="$bbtoolsExamplesDir"/data/reads.fq.gz \
+out="$bbtoolsExamplesDir"/bbduk_examples/adaptor_trimming/results/clean.fq.gz \
 ref="$bbtoolsExamplesDir"/data/adapters.fa \
 ktrim=r k=23 mink=11 hdist=1 tbo=t

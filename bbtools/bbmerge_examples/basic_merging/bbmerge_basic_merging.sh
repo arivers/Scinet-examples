@@ -10,8 +10,8 @@
 module load bbtools
 
 # Merge reads and write merged and unmerged reads to files along with an insert size histogram
-bbmerge.sh in="$bbtoolsExamplesDir"/data/reads.fq \
-out="$bbtoolsExamplesDir"/bbmerge_examples/basic_merging/results/merged.fq \
-outu="$bbtoolsExamplesDir"/bbmerge_examples/basic_merging/results/unmerged.fq \
+bbmerge.sh in="$bbtoolsExamplesDir"/data/reads.fq.gz \
+out="$bbtoolsExamplesDir"/bbmerge_examples/basic_merging/results/merged.fq.gz \
+outu="$bbtoolsExamplesDir"/bbmerge_examples/basic_merging/results/unmerged.fq.gz \
 ihist="$bbtoolsExamplesDir"/bbmerge_examples/basic_merging/results/ihist.txt \
 usejni
