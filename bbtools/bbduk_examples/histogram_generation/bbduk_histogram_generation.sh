@@ -3,6 +3,10 @@
 # histograms
 # Adam Rivers 2017-02-03
 
+# Check that the bbtools example directory variable has been set for users
+[[ -e "$bbtoolsExamplesDir" ]] || { echo >&2 "Please source the env.sh file \
+(source env.sh) in the bbtools example directory before running this script"; exit 1;}
+
 # Load the bbtools module
 module load bbmap
 
@@ -15,6 +19,12 @@ module load bbmap
 # bqhist=       Quality histogram designed for box plots.
 # lhist=        Read length histogram.
 # gchist=       Read GC content histogram.
-bbduk.sh in=../../data/reads.fq bhist=results/bhist.txt qhist=results/qhist.txt \
-gchist=results/gchist.txt aqhist=results/aqhist.txt bqhist=results/bqhist.txt \
-lhist=results/lhist.txt gchist=results/gchist.txt gcbins=auto
+bbduk.sh in="$bbtoolsExamplesDir"/data/reads.fq \
+bhist="$bbtoolsExamplesDir"/bbduk_examples/histogram_generation/results/bhist.txt \
+qhist="$bbtoolsExamplesDir"/bbduk_examples/histogram_generation/results/qhist.txt \
+gchist="$bbtoolsExamplesDir"/bbduk_examples/histogram_generation/results/gchist.txt \
+aqhist="$bbtoolsExamplesDir"/bbduk_examples/histogram_generation/results/aqhist.txt \
+bqhist="$bbtoolsExamplesDir"/bbduk_examples/histogram_generation/results/bqhist.txt \
+lhist="$bbtoolsExamplesDir"/bbduk_examples/histogram_generation/results/lhist.txt \
+gchist="$bbtoolsExamplesDir"/bbduk_examples/histogram_generation/results/gchist.txt \
+gcbins=auto

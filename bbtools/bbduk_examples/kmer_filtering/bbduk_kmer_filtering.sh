@@ -4,9 +4,16 @@
 # past Illumina barcode based removal.
 # Adam Rivers 2017-02-03
 
+# Check that the bbtools example directory variable has been set for users
+[[ -e "$bbtoolsExamplesDir" ]] || { echo >&2 "Please source the env.sh file \
+(source env.sh) in the bbtools example directory before running this script"; exit 1;}
+
 # Load the bbtools module
 module load bbmap
 
 # Filter out PhiX containing reads optionally palcing them in their own file
-bbduk.sh in=../../data/reads.fq out=results/unmatched.fq outm=results/matched.fq \
-ref=phix174_ill.ref.fa.gz k=31 hdist=1 stats=stats.txt
+bbduk.sh in=.$bbtoolsExamplesDir/data/reads.fq \
+out=$bbtoolsExamplesDir/bbduk_examples/kmer_filtering/results/unmatched.fq \
+outm=$bbtoolsExamplesDir/bbduk_examples/kmer_filtering/results/matched.fq \
+ref=$bbtoolsExamplesDir/data/phix174_ill.ref.fa.gz \
+k=31 hdist=1 stats=results/stats.txt
