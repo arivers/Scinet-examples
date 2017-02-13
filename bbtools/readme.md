@@ -1,5 +1,5 @@
 # BBtools #
-## A suite of command line utilities for sequence quality control, mapping, assembly, and kmer based analysis. ##
+### A suite of command line utilities for sequence quality control, mapping, assembly, and kmer based analysis ###
 ### Written by Brian Bushnell. ###
 These examples are maintained by Adam Rivers.
 
@@ -254,7 +254,6 @@ usejni
 Next, it maps the reads to the reference.
 
 ```bash
-
 bbmap.sh in="$bbtoolsExamplesDir"/data/reads.fq.gz \
 path="$bbtoolsExamplesDir"/bbmap_examples/basic_mapping/results \
 out="$bbtoolsExamplesDir"/bbmap_examples/basic_mapping/results/mapped.sam \
@@ -262,6 +261,7 @@ usejni pigz unpigz maxindel=90
 ```
 
 The parameters are:
+
 * `ref=` the reference sequence to map against
 * `usejni` An option to use the "Java Native Interface (jni)" to call compiled routines in C++. This speeds up merging. The option is available in CERES.
 * `pigz` and `unpigz` perform parallel compression and uncompression
